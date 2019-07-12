@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ольга Анашкина](https://up.htmlacademy.ru/adaptive/17/user/1061157).
-* Наставник: `Неизвестно`.
+* Наставник: [Оксана Вайнруб](https://up.htmlacademy.ru/adaptive/17/user/166797).
 
 ---
 
