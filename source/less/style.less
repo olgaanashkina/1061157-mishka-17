@@ -1,8 +1,28 @@
 @import "blocks/page-header.less";
 
+
+@font-face {
+  font-family: 'opensans';
+  src: url('opensans.woff2') format('woff2'),
+       url('opensans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensans';
+  src: url('opensansbold.woff2') format('woff2'),
+       url('opensansbold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
-  background: green;
-  color: #ffffff;
+  font-family: 'opensans';
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
 }
 
 a {
