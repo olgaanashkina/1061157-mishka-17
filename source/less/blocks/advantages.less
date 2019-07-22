@@ -1,6 +1,9 @@
 .advantages {
   display: flex;
   flex-direction: column;
+  min-height: 850px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .advantages__head {
@@ -45,6 +48,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advantages {
+    min-height: 550px;
+    width: 772px;
+  }
+
   .advantages__head {
     font-size: 43px;
     line-height: 50px;
@@ -62,6 +70,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .advantages {
+    width: 1150px;
+  }
+
   .advantages__head {
     font-size: 53px;
     line-height: 57px;

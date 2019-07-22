@@ -1,6 +1,8 @@
 .goods-category {
   display: flex;
   flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .goods-category__link {
@@ -28,8 +30,7 @@
   .goods-category {
     flex-direction: row;
     // Для сетки
-    min-width: 334px;
-    margin: 0 auto;
+    width: 668px;
 
     &__link {
       font-size: 20px;
@@ -40,9 +41,7 @@
 
 @media (min-width: @desktop-width) {
   .goods-category {
-    flex-direction: row;
     // Для сетки
     width: 1050px;
-    margin: 0 auto;
   }
 }
