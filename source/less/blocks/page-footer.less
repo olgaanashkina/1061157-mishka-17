@@ -1,12 +1,34 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
   .light-pink;
 }
 
 .page-footer__list {
-    padding: 30px 85px;
+  list-style: none;
+  margin: 0;
+  padding: 30px 85px;
+  display: flex;
+  min-width: 260px;
 }
 
 .copyright__title {
   font-size: 18px;
   line-height: 18px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer {
+    flex-direction: row;
+    height: 140px;
+  }
 }

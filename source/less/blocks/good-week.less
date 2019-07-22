@@ -1,3 +1,9 @@
+.good-week__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+}
+
 .good-week__head {
   font-size: 25px;
   line-height: 30px;
@@ -23,4 +29,60 @@
 
 .good-week__price {
   color: @greyish;
+}
+
+.good-week__good {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .good-week__good {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      float: right;
+    }
+  }
+
+  .good-week__wrapper {
+    display: flex;
+  }
+
+  .good-week__head {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .good-week__title {
+    line-height: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .good-week__good {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+      float: right;
+    }
+  }
+
+  .good-week__container {
+    min-height: 500px;
+  }
+
+  .good-week__head {
+    font-size: 53px;
+    line-height: 57px;
+    order: 1;
+  }
 }

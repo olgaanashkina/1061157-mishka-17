@@ -1,18 +1,48 @@
-.goods-category__item {
+.goods-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-category__link {
   margin: 0;
   padding: 25px 180px 25px 25px;
-  font-size: 19px;;
+  font-size: 19px;
   color: #ffffff;
+
   &--lamp {
     background: @seafoam;
-    background-image: url(../img/icon-interior.svg);
+    background-image: url("../img/icon-interior.svg");
     background-repeat: no-repeat;
     background-position: right;
   }
+
   &--toy {
     background: @marine;
-    background-image: url(../img/icon-toy.svg);
+    background-image: url("../img/icon-toy.svg");
     background-repeat: no-repeat;
     background-position: right;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .goods-category {
+    flex-direction: row;
+    // Для сетки
+    min-width: 334px;
+    margin: 0 auto;
+
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods-category {
+    flex-direction: row;
+    // Для сетки
+    width: 1050px;
+    margin: 0 auto;
   }
 }

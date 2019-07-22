@@ -3,31 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина игрушек ручной работы Мишка">
-      </a>
       <nav class="page-navigation">
         <button class="page-navigation__toggle" type="button">Открыть меню</button>
-        <div class="page-navigation__wrapper">
-          <ul class="page-navigation__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--cart" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="page-navigation__list site-list">
+          <li class="site-list__item site-list__item--logo">
+            <a class="page-header__logo" href="index.html">
+              <img class="page-header__image page-header__image--mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина игрушек ручной работы Мишка">
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item site-list__item--form">
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item site-list__item--search">
+            <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item site-list__item--cart">
+            <a class="site-list__link site-list__link--cart" href="#">Корзина: пока пуста</a>
+          </li>
+          <li class="site-list__item  site-list__item--desktop">
+            <a class="site-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="site-list__item  site-list__item--desktop">
+            <a class="site-list__link" href="#">Распродажа</a>
+          </li>
+          <li class="site-list__item  site-list__item--tablet">
+            <a class="site-list__link" href="#">Бесплатная доставка по России</a>
+          </li>
+        </ul>
+        <h2 class="page-navigation__active">Каталог товаров</h2>
       </nav>
     </header>
     <main class="catalog-main">
@@ -36,40 +48,65 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__link" href="catalog-item.html">
-              <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
-              <img class="catalog__foto" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фото зайчика-попрыгайчика">
+              <img class="catalog__foto--tablet" src="img/photo-hare-tablet@1x.jpg" width="334" height="334">
             </a>
-            <p class="catalog__options">Рост 30 см, вес 200 г</p>
-            <span class="catalog__price">1 200 руб.</span>
+            <div class="catalog__wrapper">
+              <a class="catalog__link" href="catalog-item.html">
+                <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
+                <img class="catalog__foto--mobile" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фото зайчика-попрыгайчика">
+                <img class="catalog__foto--desktop" src="img/photo-hare-desktop@1x.jpg" width="316" height="462">
+              </a>
+              <p class="catalog__options">Рост 30 см, вес 200 г</p>
+              <span class="catalog__price">1 200 руб.</span>
+            </div>
           </li>
           <li class="catalog__item">
             <a class="catalog__link" href="catalog-item.html">
-              <h3 class="catalog__title">Корзинка для белья</h3>
-              <img class="catalog__foto" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Фото корзинки для белья">
+              <img class="catalog__foto--tablet" src="img/photo-bowl-tablet@1x.jpg" width="334" height="334">
             </a>
-            <p class="catalog__options">Диаметр 15 см, высота 10 см</p>
-            <span class="catalog__price">690 руб.</span>
+            <div class="catalog__wrapper">
+              <a class="catalog__link" href="catalog-item.html">
+                <h3 class="catalog__title">Корзинка для белья</h3>
+                <img class="catalog__foto--mobile" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Фото корзинки для белья">
+                <img class="catalog__foto--desktop" src="img/photo-bowl-desktop@1x.jpg" width="316" height="462">
+              </a>
+              <p class="catalog__options">Диаметр 15 см, высота 10 см</p>
+              <span class="catalog__price">690 руб.</span>
+            </div>
           </li>
           <li class="catalog__item">
             <a class="catalog__link" href="catalog-item.html">
-              <h3 class="catalog__title">Большая корзинка для игрушек</h3>
-              <img class="catalog__foto" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фото большой корзины для игрушек">
+              <img class="catalog__foto--tablet" src="img/photo-toys-tablet@1x.jpg" width="334" height="334">
             </a>
-            <p class="catalog__options">Диаметр 30 см, высота 30 см</p>
-            <span class="catalog__price">1 500 руб.</span>
+            <div class="catalog__wrapper">
+              <a class="catalog__link" href="catalog-item.html">
+                <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+                <img class="catalog__foto--mobile" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фото большой корзины для игрушек">
+                <img class="catalog__foto--desktop" src="img/photo-toys-desktop@1x.jpg" width="316" height="462">
+              </a>
+              <p class="catalog__options">Диаметр 30 см, высота 30 см</p>
+              <span class="catalog__price">1 500 руб.</span>
+            </div>
           </li>
         </ul>
       </section>
       <section class="manufacture">
-        <h2 class="manufacture__head">Процесс производства</h2>
-        <video class="manufacture__video" width="260" height="150" poster="img/video-mobile@1x.jpg" alt="Видео производства">
-          <source src="http://video-mobile.mp4">
-        </video>
-        <p class="manufacture__content">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="manufacture__order button" href="form.html">Сделать заказ</a>
+        <video class="manufacture__video manufacture__video--desktop" width="682" height="455" poster="img/video-desktop@1x.jpg"></video>
+        <div class="manufacture__wrapper">
+          <video class="manufacture__video manufacture__video--tablet" width="668" height="455" poster="img/video-tablet@1x.jpg"></video>
+          <h2 class="manufacture__head">Процесс производства</h2>
+          <video class="manufacture__video manufacture__video--mobile" width="260" height="150" poster="img/video-mobile@1x.jpg" alt="Видео производства">
+            <source src="http://video-mobile.mp4">
+          </video>
+          <p class="manufacture__content">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="manufacture__order button" href="form.html">Сделать заказ</a>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo page-footer__logo--image" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина игрушек ручной работы Мишка">
+      </a>
       <div class="page-footer__wrapper">
         <ul class="page-footer__list social">
           <li class="social__item">

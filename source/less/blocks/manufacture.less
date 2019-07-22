@@ -1,5 +1,20 @@
 .manufacture {
-  border: solid 1px #ececec;;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  border: solid 1px #ececec;
+}
+
+.manufacture__video {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+.manufacture__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .manufacture__head {
@@ -13,4 +28,46 @@
   font-size: 13px;
   font-weight: normal;
   .greyish;
+}
+
+@media (min-width: @tablet-width) {
+  .manufacture {
+    height: 650px;
+  }
+
+  .manufacture__video {
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .manufacture__head {
+    font-size: 20px;
+  }
+
+  .manufacture__content {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacture {
+    flex-direction: row;
+  }
+
+  .manufacture__video {
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
 }
