@@ -1,3 +1,11 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  width: 320px;
+  margin: 0 auto;
+}
+
 .comments__head {
   font-size: 25px;
   line-height: 30px;
@@ -11,24 +19,81 @@
   .greyish;
 }
 
-.comments__username {
+.comments__name {
   font-size: 17px;
 }
 
 .comments__pointer {
   width: 130px;
   height: 52px;
-  border: solid 1px #ececec;
+  border: 1px #ececec solid;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
+
   &--prev {
-    background-image: url(../img/icon-left-arrow.svg);
+    background-image: url("../img/icon-left-arrow.svg");
   }
+
   &--next {
-    background-image: url(../img/icon-right-arrow.svg);
+    background-image: url("../img/icon-right-arrow.svg");
   }
 }
 
 .comments__write {
+  width: 175px;
+  height: 52px;
   font-size: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .comments {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // Для сетки
+    width: 772px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  .comments__write {
+    order: -1;
+  }
+
+  .comments__head {
+    order: -2;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .comments__content {
+    flex-grow: 1;
+  }
+
+  .comments__content,
+  .comments__username {
+    font-size: 17px;
+  }
+
+  .comments__name {
+    font-size: 18px;
+  }
+
+  .comments__pointer {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments {
+    // Для сетки
+    width: 1150px;
+  }
+
+  .comments__head {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
