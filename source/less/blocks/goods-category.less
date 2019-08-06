@@ -1,47 +1,126 @@
 .goods-category {
+  position: relative;
+  width: 320px;
   display: flex;
   flex-direction: column;
-  width: 320px;
   margin: 0 auto;
+}
+
+.goods-category__item {
+  font-size: 19px;
 }
 
 .goods-category__link {
   margin: 0;
-  padding: 25px 180px 25px 25px;
-  font-size: 19px;
+  padding: 10px 180px 10px 25px;
   color: #ffffff;
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   &--lamp {
     background: @seafoam;
+  }
+
+  &--lamp::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 62px;
+    top: 25px;
+    right: 35px;
     background-image: url("../img/icon-interior.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    opacity: 0.5;
   }
 
   &--toy {
     background: @marine;
+  }
+
+  &--toy::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 30px;
     background-image: url("../img/icon-toy.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    opacity: 0.5;
+  }
+
+  &--lamp:hover::after,
+  &--lamp:focus::after,
+  &--toy:hover::after,
+  &--toy:focus::after {
+    opacity: 0.7;
+  }
+
+  &--lamp:active::after,
+  &--toy:active::after {
+    opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
   .goods-category {
-    flex-direction: row;
-    // Для сетки
     width: 668px;
+    flex-direction: row;
+  }
 
-    &__link {
-      font-size: 20px;
-      line-height: 30px;
+  .goods-category__link {
+    width: 334px;
+    padding: 10px 180px 10px 35px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &--lamp::after {
+      top: 35px;
+      left: 260px;
+    }
+
+    &--toy::after {
+      top: 35px;
+      right: 40px;
+    }
+
+    &--lamp:hover,
+    &--lamp:focus {
+      margin-top: -5px;
+
+      &::after {
+        top: 30px;
+      }
+    }
+
+    &--toy:hover,
+    &--toy:focus {
+      margin-top: -5px;
+
+      &::after {
+        top: 30px;
+      }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .goods-category {
-    // Для сетки
     width: 1050px;
+  }
+
+  .goods-category__link {
+    width: 525px;
+    padding: 18px 350px 18px 35px;
+
+    &--lamp::after {
+      left: 440px;
+    }
+
+    &--toy::after {
+      right: 40px;
+    }
   }
 }
