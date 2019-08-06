@@ -1,20 +1,38 @@
 .good-week {
+  position: relative;
   width: 320px;
   margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.good-week::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 23px;
+  bottom: -55px;
+  background-image: url("../img/bg-zigzag-line.svg");
 }
 
 .good-week__container {
   display: flex;
   flex-direction: column;
-  min-height: 430px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .good-week__head {
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 30px;
   font-size: 25px;
   line-height: 30px;
 }
 
 .good-week__title {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 30px;
   line-height: 20px;
   text-transform: uppercase;
   color: @seafoam;
@@ -22,21 +40,52 @@
 
 .good-week__description,
 .good-week__table {
+  margin: 0;
+  padding-top: 25px;
+  margin-bottom: 23px;
   font-size: 15px;
   font-weight: normal;
   color: @greyish;
 }
 
-.good-week__table,
 .good-week__order {
+  padding: 12px 0;
   line-height: 20px;
 }
 
+.good-week__order:hover,
+.good-week__order:focus {
+  color: #ffffff;
+  background: @greyish;
+}
+
+.good-week__order:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.good-week__table {
+  line-height: 20px;
+  border-collapse: collapse;
+}
+
+.good-week__table td {
+  padding: 8px 0;
+  border-bottom: 1px #ececec solid;
+}
+
+.good-week__table .good-week__value {
+  padding-left: 25px;
+}
+
 .good-week__price {
+  margin: 0 auto;
+  padding: 25px 0;
   color: @greyish;
 }
 
 .good-week__good {
+  margin: 0 auto;
+
   &--tablet,
   &--desktop {
     display: none;
@@ -46,6 +95,26 @@
 @media (min-width: @tablet-width) {
   .good-week {
     width: 772px;
+    padding-top: 45px;
+    margin-bottom: 120px;
+  }
+
+  .good-week::before {
+    content: "";
+    position: absolute;
+    width: 772px;
+    height: 23px;
+    top: -15px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+  }
+
+  .good-week::after {
+    content: "";
+    position: absolute;
+    width: 772px;
+    height: 23px;
+    bottom: -70px;
+    background-image: url("../img/bg-zigzag-line.svg");
   }
 
   .good-week__good {
@@ -55,27 +124,86 @@
 
     &--tablet {
       display: block;
-      float: right;
+      position: absolute;
+      width: 333px;
+      height: 404px;
+      top: 150px;
+      right: 50px;
     }
   }
 
   .good-week__wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 52px;
   }
 
   .good-week__head {
+    padding: 0;
     font-size: 43px;
     line-height: 50px;
   }
 
   .good-week__title {
+    width: 75px;
+    padding: 0;
+    padding-right: 20px;
     line-height: 17px;
+    text-align: center;
+  }
+
+  .good-week__container {
+    margin: 0;
+    width: 282px;
+    padding: 0 51px;
+  }
+
+  .good-week__description {
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .good-week__table {
+    margin-bottom: 20px;
+  }
+
+  .good-week__table td {
+    padding: 10px 0;
+  }
+
+  .good-week__price {
+    padding: 35px 0;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .good-week {
     width: 1150px;
+    padding-top: 100px;
+    margin-bottom: 160px;
+  }
+
+  .good-week::before {
+    width: 1150px;
+    height: 34px;
+    top: -25px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+  }
+
+  .good-week::after {
+    width: 1150px;
+    bottom: -90px;
+  }
+
+  .good-week__wrapper {
+    width: 670px;
+    margin-bottom: 35px;
+    padding-left: 80px;
+    padding-right: 0;
   }
 
   .good-week__good {
@@ -85,17 +213,30 @@
 
     &--desktop {
       display: block;
-      float: right;
+      position: absolute;
+      width: 525px;
+      height: 636px;
+      top: 60px;
+      right: 50px;
+      z-index: -1;
     }
-  }
-
-  .good-week__container {
-    min-height: 500px;
   }
 
   .good-week__head {
     font-size: 53px;
     line-height: 57px;
     order: 1;
+  }
+
+  .good-week__container {
+    padding-left: 225px;
+  }
+
+  .good-week__description {
+    margin-bottom: 45px;
+  }
+
+  .good-week__table {
+    margin-bottom: 80px;
   }
 }

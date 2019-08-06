@@ -1,25 +1,30 @@
 .slogan {
   width: 322px;
-  height: 373px;
+  height: 347px;
   margin: 0 auto;
-  margin-top: 0;
+  margin-top: -26px;
   margin-bottom: -70px;
   background-image: url("../img/hero-mobile@1x.jpg");
-  background-position: 50%;
+  background-position: 50% 80%;
 }
 
 .slogan__content {
   font-size: 27px;
-  line-height: 24px;
+  line-height: 30px;
   text-align: center;
-  padding: 70px 35px;
+  padding: 70px 30px;
+}
+
+.slogan__content span {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 @media (min-width: @tablet-width) {
   .slogan {
     width: 772px;
     height: 746px;
-    margin-top: -120px;
+    margin-top: -118px;
     margin-bottom: -120px;
     background-image: url("../img/hero-tablet@1x.jpg");
   }
@@ -27,7 +32,11 @@
   .slogan__content {
     font-size: 43px;
     line-height: 50px;
-    padding: 160px 150px;
+    padding: 160px 120px;
+  }
+
+  .slogan__content span {
+    padding: 0;
   }
 }
 
@@ -41,6 +50,6 @@
   .slogan__content {
     font-size: 53px;
     line-height: 57px;
-    padding: 160px 150px;
+    padding: 160px 260px;
   }
 }

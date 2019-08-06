@@ -1,14 +1,26 @@
 .comments {
   display: flex;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 450px;
   width: 320px;
   margin: 0 auto;
+  margin-bottom: 85px;
 }
 
 .comments__head {
+  margin: 0;
+  padding-left: 30px;
   font-size: 25px;
   line-height: 30px;
+}
+
+.comments__content {
+  margin: 0;
+  padding: 35px 30px 30px 30px;
+}
+
+.comments__author {
+  padding-left: 30px;
 }
 
 .comments__content,
@@ -20,12 +32,19 @@
 }
 
 .comments__name {
+  margin: 0;
   font-size: 17px;
+}
+
+.comments__pointers {
+  margin: 0;
+  padding: 30px 26px;
 }
 
 .comments__pointer {
   width: 130px;
   height: 52px;
+  padding: 0;
   border: 1px #ececec solid;
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -41,34 +60,43 @@
 }
 
 .comments__write {
-  width: 175px;
-  height: 52px;
+  width: 260px;
+  margin: 0 auto;
+  padding: 15px 0;
   font-size: 18px;
 }
 
 @media (min-width: @tablet-width) {
   .comments {
+    width: 772px;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    // Для сетки
-    width: 772px;
+    align-items: flex-start;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: top left;
   }
 
   .comments__write {
+    width: 175px;
+    margin: 0;
+    margin-top: 70px;
+    margin-right: 50px;
+    align-self: flex-start;
     order: -1;
   }
 
   .comments__head {
+    padding-top: 70px;
+    padding-left: 45px;
     order: -2;
     font-size: 43px;
     line-height: 50px;
   }
 
   .comments__content {
+    padding: 55px 45px 60px 45px;
     flex-grow: 1;
   }
 
@@ -81,19 +109,36 @@
     font-size: 18px;
   }
 
+  .comments__pointers {
+    padding-top: 0;
+    padding-right: 65px;
+  }
+
   .comments__pointer {
+    width: 75px;
     border: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .comments {
-    // Для сетки
     width: 1150px;
+    background-position: 7% top;
   }
 
   .comments__head {
+    align-self: flex-start;
+    padding-left: 220px;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .comments__author {
+    padding-left: 225px;
+  }
+
+  .comments__content {
+    align-self: flex-start;
+    padding: 0 155px 0 225px;
   }
 }
