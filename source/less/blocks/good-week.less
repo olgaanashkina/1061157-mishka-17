@@ -85,11 +85,6 @@
 
 .good-week__good {
   margin: 0 auto;
-
-  &--tablet,
-  &--desktop {
-    display: none;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -109,27 +104,17 @@
   }
 
   .good-week::after {
-    content: "";
-    position: absolute;
     width: 772px;
     height: 23px;
     bottom: -70px;
-    background-image: url("../img/bg-zigzag-line.svg");
   }
 
   .good-week__good {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-      position: absolute;
-      width: 333px;
-      height: 404px;
-      top: 150px;
-      right: 50px;
-    }
+    position: absolute;
+    width: 333px;
+    height: 404px;
+    top: 150px;
+    right: 50px;
   }
 
   .good-week__wrapper {
@@ -191,7 +176,6 @@
     width: 1150px;
     height: 34px;
     top: -25px;
-    background-image: url("../img/bg-zigzag-fill.svg");
   }
 
   .good-week::after {
@@ -207,19 +191,11 @@
   }
 
   .good-week__good {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-      position: absolute;
-      width: 525px;
-      height: 636px;
-      top: 60px;
-      right: 50px;
-      z-index: -1;
-    }
+    width: 525px;
+    height: 636px;
+    top: 60px;
+    right: 50px;
+    z-index: -1;
   }
 
   .good-week__head {

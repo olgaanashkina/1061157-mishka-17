@@ -1,6 +1,17 @@
 .contacts {
+  position: relative;
   width: 320px;
   margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 100px;
+    bottom: 350px;
+    left: 140px;
+    background-image: url("../img/icon-map-pin.svg");
+  }
 }
 
 .contacts__container {
@@ -17,7 +28,7 @@
 }
 
 .contacts__wrapper {
-  padding: 27px 30px;
+  padding: 25px 30px;
 }
 
 .contacts__information {
@@ -33,6 +44,7 @@
 .contacts__value {
   margin: 0;
   margin-left: 30px;
+  align-self: flex-start;
 
   &--mail {
     border-bottom: 1px solid @seafoam;
@@ -41,6 +53,12 @@
   &--address {
     padding-right: 50px;
   }
+}
+
+.contacts__map {
+  width: 322px;
+  height: 457px;
+  margin: 0 auto;
 }
 
 .contacts__write {
@@ -52,51 +70,79 @@
   font-size: 18px;
 }
 
-.contacts__map {
-  &--tablet,
-  &--desktop {
-    display: none;
-  }
-}
-
 @media (min-width: @tablet-width) {
   .contacts {
     width: 772px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      top: 0;
+      right: 60px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      left: 360px;
+    }
   }
 
   .contacts__wrapper {
     display: flex;
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-bottom: 20px;
   }
 
   .contacts__map {
-    &--mobile,
-    &--desktop {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
+    width: 768px;
+    height: auto;
   }
 
   .contacts__head {
+    padding-left: 50px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .contacts__information {
+    padding-right: 45px;
     font-size: 17px;
+  }
+
+  .contacts__value {
+    margin-left: 25px;
+
+    &--address {
+      width: 240px;
+      padding-right: 0;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts__container {
     min-height: 500px;
+    margin-left: 225px;
+    padding-top: 60px;
   }
 
   .contacts {
     display: flex;
     width: 1150px;
+
+    &::before {
+      top: 50px;
+      left: 180px;
+    }
+
+    &::after {
+      top: 130px;
+      left: 870px;
+    }
   }
 
   .contacts__wrapper {
@@ -104,14 +150,11 @@
   }
 
   .contacts__map {
-    &--mobile,
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    position: absolute;
+    width: 525px;
+    height: auto;
+    top: 0;
+    right: 0;
   }
 
   .contacts__head {
