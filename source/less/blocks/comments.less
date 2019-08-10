@@ -1,10 +1,20 @@
 .comments {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 450px;
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 85px;
+  margin-bottom: 100px;
+}
+
+.comments::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 23px;
+  bottom: -55px;
+  background-image: url("../img/bg-zigzag-line.svg");
 }
 
 .comments__head {
@@ -69,13 +79,26 @@
 @media (min-width: @tablet-width) {
   .comments {
     width: 772px;
+    margin-bottom: 150px;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
-    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: top left;
+    background-image: url("../img/review@1x.jpg");
+
+    &::after {
+      width: 772px;
+      height: 23px;
+      bottom: -90px;
+    }
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .comments__write {
@@ -124,6 +147,12 @@
   .comments {
     width: 1150px;
     background-position: 7% top;
+
+    &::after {
+      width: 1150px;
+      height: 23px;
+      bottom: -90px;
+    }
   }
 
   .comments__head {
