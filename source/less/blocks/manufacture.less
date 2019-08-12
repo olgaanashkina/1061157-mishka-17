@@ -14,7 +14,41 @@
     left: 80px;
     background-image: url("../img/icon-play.svg");
   }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(1.2);
+  }
+
+  &:active::after {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
+
+// .manufacture__image {
+//   width: 260px;
+//
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     width: 101px;
+//     height: 77px;
+//     top: 130px;
+//     left: 80px;
+//     background-image: url("../img/icon-play.svg");
+//   }
+//
+//   &:hover::after,
+//   &:focus::after {
+//     transform: scale(1.2);
+//   }
+//
+//   &:active::after {
+//     transform: scale(0.8);
+//     opacity: 0.3;
+//   }
+// }
 
 .manufacture__video {
   position: relative;
@@ -79,6 +113,15 @@
       left: 290px;
     }
   }
+  //
+  // .manufacture__image {
+  //   width: 668px;
+  //
+  //   &::after {
+  //     top: 190px;
+  //     left: 290px;
+  //   }
+  // }
 
   .manufacture__video {
     width: 668px;

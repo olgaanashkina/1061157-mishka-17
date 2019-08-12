@@ -1,4 +1,56 @@
+// @aqua-marine: #46c1ae;
+// // .aqua-marine() {
+//   color: @aqua-marine;
+// }
+
+// &--mail:hover,
+// &--mail:focus {
+//   .aqua-marine;
+// }
+//
+// &--mail:active {
+//   opacity: 0.3;
+// }
+
+// .manufacture__image {
+//   width: 260px;
+//
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     width: 101px;
+//     height: 77px;
+//     top: 130px;
+//     left: 80px;
+//     background-image: url("../img/icon-play.svg");
+//   }
+//
+//   &:hover::after,
+//   &:focus::after {
+//     transform: scale(1.2);
+//   }
+//
+//   &:active::after {
+//     transform: scale(0.8);
+//     opacity: 0.3;
+//   }
+// }
+
+//
+// .manufacture__image {
+//   width: 668px;
+//
+//   &::after {
+//     top: 190px;
+//     left: 290px;
+//   }
+// }
+
+
+
 .form {
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 55px;
   line-height: 18px;
 }
@@ -9,12 +61,88 @@
 .form__contacts,
 .form__comment {
   border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.type__list,
+.color__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  padding-left: 60px;
+}
+
+.color__list {
+  margin-bottom: 10px;
+}
+
+.type__option {
+  padding-bottom: 20px;
+}
+
+.type__option label,
+.color__option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.type__radio + label::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: -10px;
+  left: -60px;
+  border: 2px solid @greyish;
+  border-radius: 50%;
+}
+
+.type__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  left: -47px;
+  border: 1px solid @seafoam;
+  background: @seafoam;
+  border-radius: 50%;
+}
+
+.color__checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 37px;
+  top: -10px;
+  left: -60px;
+  border: 2px solid @greyish;
+}
+
+.color__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 37px;
+  top: 0;
+  left: -55px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
 }
 
 .form__legend {
   line-height: 16px;
   text-transform: uppercase;
   color: @seafoam;
+  margin-bottom: 35px;
+}
+
+.color__option {
+  padding-bottom: 42px;
 }
 
 .name__first,
