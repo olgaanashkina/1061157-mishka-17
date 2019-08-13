@@ -92,25 +92,16 @@
 }
 
 .site-list__link {
-  &:hover,
-  &:focus {
-    .site-list__icon {
-      opacity: 1;
-      fill: #63d1bb;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.site-list__link {
   position: relative;
 
   &:hover,
   &:focus {
     opacity: 0.6;
+
+    .site-list__icon {
+      opacity: 1;
+      fill: #63d1bb;
+    }
   }
 
   &:active {
