@@ -61,11 +61,22 @@
   background-position: center;
 
   &--prev {
+    margin-right: -4px;
+    border-right: none;
     background-image: url("../img/icon-left-arrow.svg");
   }
 
   &--next {
     background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -74,6 +85,16 @@
   margin: 0 auto;
   padding: 15px 0;
   font-size: 18px;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background: @greyish;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
