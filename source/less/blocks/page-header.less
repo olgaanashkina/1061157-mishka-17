@@ -91,30 +91,22 @@
   }
 }
 
-.site-list__link:hover .site-list__icon,
-.site-list__link:focus .site-list__icon {
-  opacity: 1;
-
-  path {
-    fill: #63d1bb;
-  }
-}
-
-.site-list__link:active .site-list__icon {
-  opacity: 0.3;
-}
-
 .site-list__link {
   position: relative;
-}
 
-.site-list__link:hover,
-.site-list__link:focus {
-  opacity: 0.6;
-}
+  &:hover,
+  &:focus {
+    opacity: 0.6;
 
-.site-list__link:active {
-  opacity: 0.3;
+    .site-list__icon {
+      opacity: 1;
+      fill: #63d1bb;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @mobile-width-only) {

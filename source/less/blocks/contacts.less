@@ -53,6 +53,15 @@
   &--address {
     padding-right: 50px;
   }
+
+  &--mail:hover,
+  &--mail:focus {
+    .aqua-marine;
+  }
+
+  &--mail:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {
@@ -68,6 +77,16 @@
   margin-bottom: 40px;
   padding: 15px 0;
   font-size: 18px;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background: @greyish;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
