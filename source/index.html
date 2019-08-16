@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="body">
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
@@ -107,29 +107,6 @@
           <a class="good-week__order button" href="#">Заказать</a>
         </div>
       </section>
-      <section class="modal modal--closed">
-        <div class="modal__wrapper">
-          <h2 class="modal__title">Добавить в корзину</h2>
-          <p class="modal__selection">Выберите размер:</p>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <ul class="modal__list">
-              <li class="modal__item">
-                <input class="modal__size visually-hidden" type="radio" name="size" value="small-size" id="size-small" checked="">
-                <label for="size-small">S</label>
-              </li>
-              <li class="modal__item">
-                <input class="modal__size visually-hidden" type="radio" name="size" value="madium-size" id="size-medium">
-                <label for="size-medium">M</label>
-              </li>
-              <li class="modal__item">
-                <input class="modal__size visually-hidden" type="radio" name="size" value="large-size" id="size-large">
-                <label for="size-large">L</label>
-              </li>
-            </ul>
-            <button class="modal__button button" type="submit" name="button">Добавить</button>
-          </form>
-        </div>
-      </section>
       <section class="advantages">
         <h2 class="advantages__head">Коротко о нас:</h2>
         <ul class="advantages__list">
@@ -218,6 +195,27 @@
         </svg>
       </a>
     </footer>
+    <section class="modal modal--closed">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__selection">Выберите размер:</p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="modal__size visually-hidden" type="radio" name="size" value="small-size" id="size-small" checked="">
+            <label for="size-small">S</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__size visually-hidden" type="radio" name="size" value="madium-size" id="size-medium">
+            <label for="size-medium">M</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__size visually-hidden" type="radio" name="size" value="large-size" id="size-large">
+            <label for="size-large">L</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit" name="button">Добавить</button>
+      </form>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
