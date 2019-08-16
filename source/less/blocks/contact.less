@@ -1,0 +1,129 @@
+.contact__icon {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: 35px;
+  right: 5px;
+  opacity: 0.2;
+
+  &--mail {
+    width: 32px;
+    height: 32px;
+    top: 30px;
+  }
+}
+
+.contact__legend {
+  padding: 0;
+  padding-right: 25px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @seafoam;
+  margin-bottom: 5px;
+}
+
+.contact__phone,
+.contact__mail {
+  width: 264px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  .greyish;
+  border: none;
+  box-shadow: inset 0 -2px 0 0 #000000;
+
+  &::placeholder {
+    .greyish-lite;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 -2px 0 0 @seafoam-blue;
+  }
+
+  &:active {
+    .greyish;
+  }
+}
+
+.contact__wrapper {
+  &:hover,
+  &:focus {
+    .contact__phone,
+    .contact__mail {
+      box-shadow: inset 0 -2px 0 0 @seafoam-blue;
+
+      &::placeholder {
+        .greyish-lite;
+      }
+    }
+
+    .contact__icon {
+      opacity: 1;
+      fill: @seafoam-blue;
+    }
+  }
+
+  &:active {
+    .contact__phone,
+    .contact__mail {
+      .greyish;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contact__legend {
+    width: 60px;
+    margin: 0;
+  }
+
+  .contact__wrapper {
+    width: 500px;
+    margin-left: 180px;
+    margin-top: -30px;
+  }
+
+  .contact__phone,
+  .contact__mail {
+    width: 480px;
+    margin-bottom: 45px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: @light-pink;
+  }
+
+  .contact__icon {
+    top: 0;
+    right: 30px;
+
+    &--mail {
+      top: 5px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact__legend {
+    padding: 0;
+  }
+
+  .contact__wrapper {
+    width: 700px;
+    margin-left: 120px;
+  }
+
+  .contact__phone,
+  .contact__mail {
+    width: 680px;
+    margin-bottom: 40px;
+  }
+
+  .contact__icon {
+    right: 115px;
+  }
+}

@@ -1,0 +1,35 @@
+.copyright__link {
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    fill: @aqua-marine;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__title {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  fill: @seafoam;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    margin: 0;
+    padding-right: 40px;
+  }
+}
