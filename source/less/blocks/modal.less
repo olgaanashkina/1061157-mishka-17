@@ -1,4 +1,5 @@
 .modal {
+  display: none;
   position: absolute;
   width: 320px;
   min-height: 336px;
@@ -7,10 +8,7 @@
   background: #ffffff;
   border: 1px solid @Outside;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
-}
-
-.modal--closed {
-  display: none;
+  z-index: 20;
 }
 
 .modal--opened {

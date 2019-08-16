@@ -3,7 +3,7 @@ var navMain = document.querySelector('.page-navigation');
 var navToggle = document.querySelector('.page-navigation__toggle');
 var openModal = document.querySelector('.good-week__order');
 var modal = document.querySelector('.modal');
-var closeModal = document.querySelector('.modal__button');
+var overlay = document.querySelector('.overlay')
 
 
 navMain.classList.remove('page-navigation--nojs');
@@ -18,22 +18,24 @@ if (navMain.classList.contains('page-navigation--closed')) {
 }
 });
 
-openModal.addEventListener('click', function() {
-if (modal.classList.contains('modal--closed')) {
-  modal.classList.remove('modal--closed');
+openModal.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  overlay.classList.add('overlay--show');
   modal.classList.add('modal--opened');
-} else {
-  modal.classList.add('modal--closed');
-  modal.classList.remove('modal--opened');
-}
 });
 
-closeModal.addEventListener('click', function () {
-if (modal.classList.contains('modal--opened')) {
+overlay.addEventListener('click', function (evt) {
+  evt.preventDefault();
   modal.classList.remove('modal--opened');
-  modal.classList.add('modal--closed');
-} else {
-  modal.classList.add('modal--opened');
-  modal.classList.remove('modal--closed');
-}
+  overlay.classList.remove('overlay--show');
+});
+
+window. addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (modal.classList.contains('modal--opened')) {
+      modal.classList.remove('modal--opened');
+      overlay.classList.remove('overlay--show');
+    }
+  }
 });
