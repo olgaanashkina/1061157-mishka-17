@@ -7,7 +7,7 @@
   padding-top: 27px;
   padding-bottom: 27px;
   padding-left: 72px;
-  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+  box-shadow: 0 1px 0 0 @very-light-pink, inset 0 1px 0 0 @very-light-pink;
 
   &--logo {
     padding-top: 22px;
@@ -85,22 +85,33 @@
     &--logo {
       width: 321px;
       padding-left: 51px;
-      margin-right: auto;
+      padding-top: 17px;
+      padding-bottom: 15px;
+      margin-right: 0;
       text-align: left;
       order: -5;
+      border: 1px solid @very-light-pink;
+      border-right: none;
     }
 
     &--search {
       width: 82px;
       order: -4;
+      padding-top: 42px;
+      padding-bottom: 42px;
+      border: 1px solid @very-light-pink;
     }
 
     &--cart {
       width: 264px;
-      padding-right: 52px;
+      padding-right: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       font-size: 17px;
       text-align: right;
       order: -3;
+      border: 1px solid @very-light-pink;
+      border-left: none;
     }
   }
 
@@ -133,31 +144,51 @@
     }
 
     &--logo {
-      padding-left: 0;
       width: 260px;
+      padding-right: 58px;
+      padding-left: 0;
+      padding-top: 9px;
+      padding-bottom: 7px;
       text-align: center;
+      order: 0;
+      border-left: none;
+    }
+
+    &--search {
+      padding-top: 50px;
+      padding-bottom: 45px;
       order: 0;
     }
 
-    &--search,
     &--cart {
+      width: 254px;
+      padding-top: 36px;
+      padding-bottom: 35px;
       order: 0;
     }
 
     &--catalog {
       width: 170px;
       padding-left: 50px;
+      padding-top: 36px;
+      padding-bottom: 35px;
       font-size: 17px;
       text-align: left;
       order: -2;
+      border: 1px solid @very-light-pink;
+      border-right: none;
     }
 
     &--form {
       width: 170px;
       padding-left: 50px;
+      padding-top: 36px;
+      padding-bottom: 35px;
       text-align: left;
       font-size: 17px;
       order: -1;
+      border: 1px solid @very-light-pink;
+      border-right: none;
     }
   }
 }

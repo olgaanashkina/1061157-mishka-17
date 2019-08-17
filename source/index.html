@@ -33,7 +33,7 @@
             <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item site-list__item--search">
-            <a class="site-list__link site-list__link--search" href="#">
+            <a class="site-list__link site-list__link--search" href="search.html">
               <svg class="site-list__icon site-list__icon--search" width="17.6px" height="17.6px">
                 <use xlink:href="#icon-search"></use>
               </svg>
@@ -41,11 +41,11 @@
             </a>
           </li>
           <li class="site-list__item site-list__item--cart">
-            <a class="site-list__link site-list__link--cart" href="#">
+            <a class="site-list__link site-list__link--cart" href="cart.html">
               <svg class="site-list__icon site-list__icon--cart" width="20.294px" height="18.849px">
                 <use xlink:href="#icon-cart"></use>
               </svg>
-              Корзина: пока пуста
+              <span>Корзина: пока пуста</span>
             </a>
           </li>
           <li class="site-list__item  site-list__item--desktop">
@@ -129,7 +129,7 @@
           <button class="comments__pointer comments__pointer--prev" type="button"></button>
           <button class="comments__pointer comments__pointer--next" type="button"></button>
         </p>
-        <a class="comments__write button" href="#">Написать</a>
+        <a class="comments__write button" href="comment.html">Написать</a>
       </section>
       <section class="contacts">
         <div class="contacts__container">
@@ -144,16 +144,18 @@
               <p class="contacts__value contacts__value--address">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
             </div>
           </div>
-          <!-- <iframe class="contacts__imap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1494.477087165371!2d30.32190020605807!3d59.93879568449942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1562948589433!5m2!1sru!2sru" width="322" height="457" allowfullscreen></iframe> -->
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 772px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 772px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map contacts__map--mobile" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
-          </picture>
-          <a class="contacts__write button" href="#">Напишите нам</a>
+          <div class="contacts__map-wrapper">
+            <iframe class="contacts__imap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1494.477087165371!2d30.32190020605807!3d59.93879568449942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1562948589433!5m2!1sru!2sru" width="322" height="457" allowfullscreen></iframe>
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 772px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 772px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="contacts__map contacts__map--mobile" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+            </picture>
+          </div>
+          <a class="contacts__write button" href="form-mail.html">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -166,21 +168,21 @@
       <div class="page-footer__wrapper">
         <ul class="page-footer__list social">
           <li class="social__item">
-            <a class="social__link social__link--inst" href="#">
+            <a class="social__link social__link--inst" href="#" aria-label="Инстаграмм">
               <svg class="social__icon" width="21.769px" height="21.334px">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--fb" href="#">
+            <a class="social__link social__link--fb" href="#" aria-label="Фейсбук">
               <svg class="social__icon" width="14.962px" height="27.718px">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twit" href="#">
+            <a class="social__link social__link--twit" href="#" aria-label="Твиттер">
               <svg class="social__icon" width="23.494px" height="20.168px">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
@@ -188,7 +190,7 @@
           </li>
         </ul>
       </div>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
         <span class="copyright__title">Разработано</span>
         <svg class="copyright__icon" width="26.943px" height="34.09px">
           <use xlink:href="#logo-htmlacademy"></use>
@@ -215,7 +217,7 @@
             <label for="size-large">L</label>
           </li>
         </ul>
-        <button class="modal__button button" type="submit" name="button">Добавить</button>
+        <a class="modal__button button" href="cart.html">Добавить</a>
       </form>
     </section>
     <script src="js/script.js"></script>

@@ -33,7 +33,7 @@
             <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item site-list__item--search">
-            <a class="site-list__link site-list__link--search" href="#">
+            <a class="site-list__link site-list__link--search" href="search.html">
               <svg class="site-list__icon site-list__icon--search" width="17.6px" height="17.6px">
                 <use xlink:href="#icon-search"></use>
               </svg>
@@ -41,11 +41,11 @@
             </a>
           </li>
           <li class="site-list__item site-list__item--cart">
-            <a class="site-list__link site-list__link--cart" href="#">
+            <a class="site-list__link site-list__link--cart" href="cart.html">
               <svg class="site-list__icon site-list__icon--cart" width="20.294px" height="18.849px">
                 <use xlink:href="#icon-cart"></use>
               </svg>
-              Корзина: пока пуста
+              <span>Корзина: пока пуста</span>
             </a>
           </li>
           <li class="site-list__item  site-list__item--desktop">
@@ -65,7 +65,7 @@
         <h2 class="catalog--active">Каталог товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a class="catalog__link" href="catalog-item.html">
+            <a class="catalog__link" href="catalog-item-hare.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 772px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
@@ -85,7 +85,7 @@
             </a>
           </li>
           <li class="catalog__item">
-            <a class="catalog__link" href="catalog-item.html">
+            <a class="catalog__link" href="catalog-item-bowl.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 772px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
@@ -105,7 +105,7 @@
             </a>
           </li>
           <li class="catalog__item">
-            <a class="catalog__link" href="catalog-item.html">
+            <a class="catalog__link" href="catalog-item-toys.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 772px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
@@ -129,7 +129,7 @@
       <section class="manufacture">
         <div class="manufacture__wrapper">
           <picture class="manufacture__play">
-            <source type="image/webp" media="(min-width: 1150px)" srcset="video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 772px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
@@ -151,21 +151,21 @@
       <div class="page-footer__wrapper">
         <ul class="page-footer__list social">
           <li class="social__item">
-            <a class="social__link social__link--inst" href="#">
+            <a class="social__link social__link--inst" href="#" aria-label="Инстаграмм">
               <svg class="social__icon" width="21.769px" height="21.334px">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--fb" href="#">
+            <a class="social__link social__link--fb" href="#" aria-label="Фейсбук">
               <svg class="social__icon" width="14.962px" height="27.718px">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twit" href="#">
+            <a class="social__link social__link--twit" href="#" aria-label="Твиттер">
               <svg class="social__icon" width="23.494px" height="20.168px">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
@@ -173,7 +173,7 @@
           </li>
         </ul>
       </div>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
         <span class="copyright__title">Разработано</span>
         <svg class="copyright__icon" width="26.943px" height="34.09px">
           <use xlink:href="#logo-htmlacademy"></use>
@@ -182,7 +182,7 @@
     </footer>
     <div class="overlay">
     </div>
-    <section class="modal">
+    <section class="modal modal--catalog">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__selection">Выберите размер:</p>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -200,7 +200,7 @@
             <label for="size-large">L</label>
           </li>
         </ul>
-        <button class="modal__button button" type="submit" name="button">Добавить</button>
+        <a class="modal__button button" href="cart.html">Добавить</a>
       </form>
     </section>
     <script src="js/script-catalog.js"></script>

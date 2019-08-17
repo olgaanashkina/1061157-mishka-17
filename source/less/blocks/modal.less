@@ -3,12 +3,16 @@
   position: absolute;
   width: 320px;
   min-height: 336px;
-  top: 50%;
-  left: calc(50% - 160px);
+  top: 180%;
+  left: calc(50% - 320px / 2);
   background: #ffffff;
   border: 1px solid @Outside;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   z-index: 20;
+
+  &--catalog {
+    top: 140%;
+  }
 }
 
 .modal--opened {
@@ -101,7 +105,8 @@
 @media (min-width: @tablet-width) {
   .modal {
     width: 566px;
-    left: calc(50% - 283px);
+    top: 200%;
+    left: calc(50% - 566px / 2);
   }
 
   .modal__title {
@@ -147,6 +152,11 @@
 @media (min-width: @desktop-width) {
   .modal {
     width: 566px;
-    left: calc(50% - 283px);
+    top: 100%;
+    left: calc(50% - 566px / 2);
+
+    &--catalog {
+      top: 70%;
+    }
   }
 }
