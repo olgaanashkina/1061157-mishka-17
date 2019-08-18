@@ -20,16 +20,14 @@
   display: flex;
   flex-direction: column;
   width: 260px;
-  min-height: 365px;
 }
 
 .catalog__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 374px;
   margin-bottom: 30px;
-  border: solid 1px #ececec;
+  border: solid 1px @very-light-pink;
 
   &:hover,
   &:focus {
@@ -75,7 +73,7 @@
   padding-bottom: 25px;
   font-size: 15px;
   text-align: left;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid @very-light-pink;
 }
 
 .catalog__options {
@@ -116,12 +114,12 @@
     position: absolute;
     width: 772px;
     height: 23px;
-    top: 295px;
+    top: 290px;
     background-image: url("../img/bg-zigzag-fill.svg");
   }
 
   .catalog--active {
-    margin-top: -70px;
+    margin-top: -65px;
     margin-bottom: 40px;
     padding-top: 100px;
     font-size: 43px;
@@ -174,12 +172,12 @@
 @media (min-width: @desktop-width) {
   .catalog {
     width: 1150px;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
   }
 
   .catalog::before {
     width: 1150px;
-    top: 360px;
+    top: 340px;
   }
 
   .catalog--active {
@@ -192,17 +190,15 @@
 
   .catalog__list {
     width: 1050px;
-    height: 660px;
     padding-top: 50px;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
   .catalog__item {
     width: 316px;
-    min-height: 660px;
-    margin-right: 50px;
+    margin-right: 45px;
     padding-left: 0;
-    flex-direction: column;
 
     &:nth-child(3n) {
       margin-right: 0;
