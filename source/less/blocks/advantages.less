@@ -1,7 +1,7 @@
 .advantages {
   width: 320px;
   margin: 0 auto;
-  height: 790px;
+  min-height: 790px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -19,6 +19,8 @@
   list-style: none;
   width: 210px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   padding-left: 30px;
   line-height: 20px;
 }
@@ -57,7 +59,7 @@
 @media (min-width: @tablet-width) {
   .advantages {
     width: 772px;
-    height: 570px;
+    min-height: 560px;
   }
 
   .advantages__head {
@@ -68,19 +70,18 @@
   }
 
   .advantages__list {
+    width: 730px;
+    height: 450px;
+    flex-wrap: wrap;
     font-size: 20px;
     line-height: 22px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 450px;
   }
 
   .advantages__item {
     width: 250px;
     margin-left: 15px;
     padding-top: 100px;
-    padding-right: 60px;
+    margin-right: 60px;
 
     &--home {
       width: 300px;

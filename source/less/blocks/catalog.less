@@ -174,7 +174,7 @@
 @media (min-width: @desktop-width) {
   .catalog {
     width: 1150px;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
   }
 
   .catalog::before {
@@ -192,17 +192,17 @@
 
   .catalog__list {
     width: 1050px;
-    height: 660px;
+    min-height: 660px;
     padding-top: 50px;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
   .catalog__item {
     width: 316px;
     min-height: 660px;
-    margin-right: 50px;
+    margin-right: 45px;
     padding-left: 0;
-    flex-direction: column;
 
     &:nth-child(3n) {
       margin-right: 0;

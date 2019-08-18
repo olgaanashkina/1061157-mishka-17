@@ -1,9 +1,9 @@
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 320px;
   min-height: 336px;
-  top: 180%;
+  top: calc(50% - 336px / 2);
   left: calc(50% - 320px / 2);
   background: #ffffff;
   border: 1px solid @Outside;
@@ -105,7 +105,7 @@
 @media (min-width: @tablet-width) {
   .modal {
     width: 566px;
-    top: 200%;
+    top: calc(50% - 336px / 2);
     left: calc(50% - 566px / 2);
   }
 
@@ -152,8 +152,7 @@
 @media (min-width: @desktop-width) {
   .modal {
     width: 566px;
-    top: 100%;
-    left: calc(50% - 566px / 2);
+
 
     &--catalog {
       top: 70%;
