@@ -37,7 +37,6 @@
 .manufacture__wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 503px;
 
   &:hover,
   &:focus {
@@ -84,6 +83,7 @@
 .manufacture__order {
   width: 192px;
   margin: 0 auto;
+  margin-bottom: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -100,7 +100,6 @@
 
 @media (min-width: @tablet-width) {
   .manufacture {
-    min-height: 745px;
     width: 668px;
     margin: 0 auto;
     margin-bottom: 60px;
@@ -145,14 +144,12 @@
 @media (min-width: @desktop-width) {
   .manufacture {
     width: 1050px;
-    min-height: 455px;
     margin: 0 auto;
     margin-bottom: 105px;
   }
 
   .manufacture__wrapper {
     width: 367px;
-    min-height: 455px;
     padding-left: 682px;
   }
 
@@ -175,13 +172,14 @@
   }
 
   .manufacture__content {
-    width: 222px;
+    width: 240px;
     padding-left: 75px;
     padding-top: 20px;
-    padding-bottom: 45px;
+    padding-bottom: 55px;
   }
 
   .manufacture__order {
     width: 230px;
+    margin-bottom: 60px;
   }
 }
