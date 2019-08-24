@@ -27,15 +27,16 @@
     width: 772px;
     margin: 0 auto;
     margin-bottom: 75px;
-  }
 
-  .about-form::before {
-    content: "";
-    position: absolute;
-    width: 772px;
-    height: 23px;
-    top: 290px;
-    background-image: url("../img/bg-zigzag-fill.svg");
+    &::before {
+      content: "";
+      position: absolute;
+      width: 772px;
+      height: 23px;
+      top: 290px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 23px;
+    }
   }
 
   .about-form__active {
@@ -60,11 +61,13 @@
     width: 1150px;
     margin: 0 auto;
     margin-bottom: 75px;
-  }
 
-  .about-form::before {
-    width: 1150px;
-    top: 335px;
+    &::before {
+      width: 1150px;
+      height: 34px;
+      top: 335px;
+      background-size: auto;
+    }
   }
 
   .about-form__active {

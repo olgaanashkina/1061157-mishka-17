@@ -10,11 +10,11 @@
     content: "";
     position: absolute;
     width: 320px;
-    height: 23px;
+    height: 6px;
     bottom: -55px;
     left: 0;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: cover;
+    background-size: auto 6px;
   }
 }
 
@@ -112,9 +112,10 @@
 
     &::after {
       width: 772px;
-      height: 23px;
+      height: 15px;
       bottom: -90px;
       left: 0;
+      background-size: auto 15px;
     }
 
     @media (min-resolution: @retina-dpi),
@@ -176,6 +177,7 @@
       height: 23px;
       bottom: -90px;
       left: 0;
+      background-size: auto;
     }
   }
 
