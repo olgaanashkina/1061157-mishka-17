@@ -75,10 +75,10 @@
       <section class="goods-category">
         <h2 class="visually-hidden">Выбрать категорию товара</h2>
         <a class="goods-category__link goods-category__link--lamp" href="catalog.html">
-          <h3 class="goods-category__item">Предметы интерьера</h3>
+          <h3 class="goods-category__item">Предметы <br> интерьера</h3>
         </a>
         <a class="goods-category__link goods-category__link--toy" href="catalog.html">
-          <h3 class="goods-category__item">Детские игрушки</h3>
+          <h3 class="goods-category__item">Детские <br> игрушки</h3>
         </a>
       </section>
       <section class="good-week">
@@ -133,8 +133,8 @@
           <span class="comments__username">@misssssiskras</span>
         </div>
         <p class="comments__pointers">
-          <button class="comments__pointer comments__pointer--prev" type="button"></button>
-          <button class="comments__pointer comments__pointer--next" type="button"></button>
+          <button class="comments__pointer comments__pointer--prev" type="button" aria-label="Предыдущий отзыв"></button>
+          <button class="comments__pointer comments__pointer--next" type="button" aria-label="Следующий отзыв"></button>
         </p>
         <a class="comments__write button" href="comment.html">Написать</a>
       </section>
@@ -144,7 +144,7 @@
           <div class="contacts__wrapper">
             <div class="contacts__information">
               <span class="contacts__field">e-mail:</span>
-              <span class="contacts__value contacts__value--mail">info@mimimishkashop.ru</span>
+              <a class="contacts__value contacts__value--mail" href="#">info@mimimishkashop.ru</a>
             </div>
             <div class="contacts__information">
               <span class="contacts__field">адрес:</span>
@@ -167,7 +167,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
+      <a class="page-footer__logo" href="index.html" aria-label="Логотип магазина Мишка">
         <svg class="page-footer__logo" width="101.615px" height="34.056px">
           <use xlink:href="#logo-footer"></use>
         </svg>

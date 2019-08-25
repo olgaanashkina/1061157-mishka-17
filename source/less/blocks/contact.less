@@ -1,3 +1,26 @@
+.contact {
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__legend {
+  padding: 0;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @seafoam;
+  margin-bottom: 5px;
+  background-image: linear-gradient(@seafoam, @seafoam);
+  background-size: 198px 1px;
+  background-repeat: no-repeat;
+  background-position: right top 8px;
+
+  &--mail {
+    background-size: 179px 1px;
+  }
+}
+
 .contact__icon {
   position: absolute;
   width: 25px;
@@ -11,15 +34,6 @@
     height: 32px;
     top: 30px;
   }
-}
-
-.contact__legend {
-  padding: 0;
-  padding-right: 25px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: @seafoam;
-  margin-bottom: 5px;
 }
 
 .contact__phone,
@@ -50,6 +64,10 @@
   }
 }
 
+.contact__mail {
+  margin-bottom: 30px;
+}
+
 .contact__wrapper {
   &:hover,
   &:focus {
@@ -77,53 +95,73 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contact {
+    width: 672px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .contact__legend {
-    width: 60px;
+    width: 70px;
     margin: 0;
+    margin-top: 18px;
+    background: none;
   }
 
   .contact__wrapper {
     width: 500px;
-    margin-left: 180px;
-    margin-top: -30px;
   }
 
   .contact__phone,
   .contact__mail {
     width: 480px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     padding-left: 15px;
     padding-bottom: 15px;
     background-color: @light-pink;
   }
 
+  .contact__mail {
+    margin-bottom: 50px;
+  }
+
   .contact__icon {
-    top: 0;
+    top: 12px;
     right: 30px;
 
     &--mail {
-      top: 5px;
+      top: 12px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .contact {
+    width: 825px;
+    margin-left: 110px;
+    flex-direction: row;
+  }
+
   .contact__legend {
     padding: 0;
   }
 
   .contact__wrapper {
     width: 700px;
-    margin-left: 120px;
   }
 
-  .contact__phone,
+  .contact__phone {
+    width: 680px;
+    margin-bottom: 35px;
+  }
+
   .contact__mail {
     width: 680px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   .contact__icon {
-    right: 115px;
+    right: 7px;
   }
 }
