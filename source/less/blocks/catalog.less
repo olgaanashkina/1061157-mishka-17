@@ -84,6 +84,16 @@
   .greyish;
 }
 
+.catalog__cart {
+  &:focus {
+    .catalog__icon {
+      opacity: 1;
+      fill: @seafoam;
+      outline: 3px auto #4d90fe;
+    }
+  }
+}
+
 .catalog__icon {
   position: absolute;
   width: 20px;
@@ -92,10 +102,9 @@
   right: 30px;
   opacity: 0.2;
 
-  &:hover,
-  &:focus {
-    opacity: 1;
+  &:hover {
     fill: @seafoam;
+    opacity: 1;
   }
 
   &:active {
