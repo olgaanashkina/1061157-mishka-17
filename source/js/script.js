@@ -3,7 +3,7 @@ var navMain = document.querySelector('.page-navigation');
 var navToggle = document.querySelector('.page-navigation__toggle');
 var openModal = document.querySelector('.good-week__order');
 var modal = document.querySelector('.modal');
-var overlay = document.querySelector('.overlay')
+var overlay = document.querySelector('.overlay');
 
 
 navMain.classList.remove('page-navigation--nojs');
