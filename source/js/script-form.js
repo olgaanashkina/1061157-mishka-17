@@ -1,4 +1,3 @@
-
 var navMain = document.querySelector('.page-navigation');
 var navToggle = document.querySelector('.page-navigation__toggle');
 
