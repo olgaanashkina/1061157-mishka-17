@@ -102,14 +102,15 @@
       height: 24px;
       top: -10px;
       background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: auto 24px;
+      background-size: 100%;
     }
 
     &::after {
       width: 768px;
       height: 15px;
       bottom: -70px;
-      background-size: auto 15px;
+      background-size: 101%;
+      transform: rotateX(180deg);
     }
   }
 
@@ -189,7 +190,7 @@
       width: 1150px;
       height: 34px;
       top: -25px;
-      background-size: auto;
+      background-size: 110%;
     }
 
     &::after {
@@ -197,7 +198,8 @@
       height: 23px;
       bottom: -90px;
       left: 50px;
-      background-size: auto;
+      background-size: 1050px 23px;
+      transform: rotateX(180deg);
     }
   }
 
